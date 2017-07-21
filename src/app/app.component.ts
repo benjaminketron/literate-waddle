@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Account';
+
+  openModal(id: string){
+    console.log('opening')
+  }
+
+  closeModal(id: string){
+  }
 }
