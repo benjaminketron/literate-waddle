@@ -13,7 +13,7 @@ install:
 test_script:
   - node --version
   - yarn --version
-  - yarn -- test --single-run --no-progress
+  - yarn add test --single-run --no-progress
 
 build: off
 
