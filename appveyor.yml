@@ -1,22 +1,22 @@
-image: Visual Studio 2017
 
 environment:
-  nodejs_version: "6"
+  matrix:
+    - nodejs_version: "6"
 
-platform:
-  - x64
+matrix:
+  fast_finish: true
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - yarn install --no-progress
+  - yarn --frozen-lockfile
 
 test_script:
-  - yarn ng -- build --prod --no-progress
-  - yarn test -- --single-run --no-progress
-  - yarn lint
+  - node --version
+  - yarn --version
+  - node tests\run_e2e.js --appveyor
 
 build: off
 
 cache:
-  - node_modules -> yarn.lock
+  - node_modules
   - "%LOCALAPPDATA%/Yarn"
