@@ -14,7 +14,7 @@ install:
 test_script:
   - node --version
   - npm --version
-  - npm test -watch false --single-run true
+  - ng test single-run
 
 build: off
 
