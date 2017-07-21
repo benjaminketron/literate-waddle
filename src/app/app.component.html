@@ -1,8 +1,8 @@
-<h1>
+<h1>  
   {{title}}
 </h1>
 
-<nav><a (click)="openModal()">Progress</a></nav>
+<nav><a class="button" (click)="openModal()">Progress</a></nav>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend lobortis imperdiet. Donec efficitur quis dolor non tempor. Fusce sapien mi, semper nec pellentesque a, finibus in mauris. Nam est massa, auctor quis ornare hendrerit, efficitur ut erat. Etiam ac suscipit metus. Pellentesque malesuada libero vel rutrum posuere. Phasellus est nisl, venenatis vitae mi at, pretium lobortis metus. Cras eros neque, volutpat non massa non, tristique consectetur dui. Fusce ut nibh est. Suspendisse nec lectus at enim varius lacinia. Praesent ac lacus ac lorem tincidunt consequat. Vestibulum sed velit eget metus convallis sodales id et magna.</p>
 
@@ -10,3 +10,37 @@
 
 <p>Suspendisse erat tellus, ullamcorper vel dolor et, iaculis tristique odio. Quisque consequat eget justo vel bibendum. Ut varius purus at condimentum maximus. Nulla vestibulum, neque ut porta molestie, arcu ipsum facilisis tellus, ut aliquam magna mi ac lectus. Sed sed sapien ut odio consequat gravida non molestie lorem. Phasellus quis turpis sollicitudin, rutrum enim a, consequat mauris. Aenean dignissim leo quis sapien imperdiet ultrices.</p>
 
+<modal id="custom-modal-1">
+    <div class="modal">
+        <div class="modal-container">
+          <div class="modal-title">
+            Your Progress <a class="modal-close" (click)="closeModal();">X</a>
+          </div>
+          <div class="modal-body">
+             <div>
+              <div class="progress-area">
+                <span class="progress-label">Reached:</span>
+                <span class="progress">
+                  <span class="bar">
+                    <span class="progress-caret-container">
+                      <span class="progress-caret">
+                        <span class="progress-caret-body">
+                          <span class="progress-caret-arrow">^</span>
+                          $56
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span class="progress-target">
+                  Target<br/>
+                  $125
+                </span>
+              </div>
+              <p>&#9432; You need $69 more to reach your target.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalComponentService } from './modal-component/modal.component.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My Account';
 
+  constructor(private modalComponentService: ModalComponentService) {
+
+  }
+
   openModal(id: string){
-    console.log('opening')
+    this.modalComponentService.openModal();
   }
 
   closeModal(id: string){
+    this.modalComponentService.closeModal();
   }
 }
