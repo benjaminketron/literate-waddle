@@ -1,22 +1,21 @@
 
 environment:
   matrix:
-    - nodejs_version: "6"
+    - nodejs_version: "6.9.1"
 
 matrix:
   fast_finish: true
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - yarn --frozen-lockfile
+  - npm install -g angular-cli
 
 test_script:
   - node --version
-  - yarn --version
-  - yarn add test --single-run --no-progress
+  - npm --version
+  - npm test --watch=false
 
 build: off
 
 cache:
   - node_modules
-  - "%LOCALAPPDATA%/Yarn"
