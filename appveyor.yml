@@ -14,7 +14,7 @@ install:
 test_script:
   - node --version
   - npm --version
-  - npm test --single-run --no-progress
+  - npm test -watch false --single-run true
 
 build: off
 
