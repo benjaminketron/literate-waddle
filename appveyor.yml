@@ -11,7 +11,7 @@ install:
   - yarn install --no-progress
 
 test_script:
-  - yarn ng -- build --prod --aot --no-progress
+  - yarn ng -- build --prod --no-progress
   - yarn test -- --single-run --no-progress
   - yarn lint
 
