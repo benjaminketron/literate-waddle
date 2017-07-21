@@ -13,7 +13,7 @@ install:
 test_script:
   - node --version
   - yarn --version
-  - node tests\run_e2e.js --appveyor
+  - ng test --single-run --no-progress
 
 build: off
 
