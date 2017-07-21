@@ -3,7 +3,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal-component/modal.component';
 import { ModalComponentService } from './modal-component/modal.component.service';
-sdfasdf
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
